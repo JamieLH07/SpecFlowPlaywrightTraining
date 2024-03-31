@@ -18,4 +18,6 @@ Scenario: Test that Products can be added to the Basket
 	Then I see the Products list
 	And I add all the products to the Basket
 	And I am able to Navigate to the Basket
-	Then I can see products have been added to the Basket
+	Then I can see my products have been added to the Basket
+	And I can then logout of the Application
+	Then Logout was successful
