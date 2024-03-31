@@ -15,6 +15,7 @@ namespace PlaywrightTrainingProject.Pages
         private ILocator _txtpassWord => _page.Locator("#password");
         private ILocator _btnLogin => _page.Locator("input", new PageLocatorOptions { HasTextString = "Login" });
         private ILocator _txtProducts => _page.Locator("text='Products'");
+        private ILocator _txtLoginError => _page.Locator("css=#login_button_container > div > form > div.error-message-container.error > h3");
 
 
         public async Task Login(string userName, string Password)
@@ -27,6 +28,9 @@ namespace PlaywrightTrainingProject.Pages
         }
 
         public async Task<bool> IsProductTxtExists() => await _txtProducts.IsVisibleAsync();
+
+        public async Task<bool> IsErrorDisplayed() => await _txtLoginError.IsVisibleAsync();
+
 
     }
 }
