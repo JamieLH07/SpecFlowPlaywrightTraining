@@ -5,12 +5,12 @@ using TechTalk.SpecFlow.Assist;
 namespace SpecFlowPlaywrightTraining.StepDefinitions
 {
     [Binding]
-    public sealed class SauceAppTestSteps
+    public sealed class SauceAppLoginSteps
     {
         private readonly Driver _driver;
         private readonly LoginPage _loginPage;
 
-        public SauceAppTestSteps(Driver driver)
+        public SauceAppLoginSteps(Driver driver)
         {
             _driver = driver;
             _loginPage = new LoginPage(_driver.Page);
@@ -32,8 +32,16 @@ namespace SpecFlowPlaywrightTraining.StepDefinitions
         [Then(@"I see the Products list")]
         public async Task ThenISeeTheProductsList()
         {
-            var isExist = await _loginPage.IsProductTxtExists();
-            isExist.Should().BeTrue();
+            var isProductPresent = await _loginPage.IsProductTxtExists();
+            isProductPresent.Should().BeTrue();
         }
+
+        [Then(@"I see the login error message")]
+        public async Task ThenISeeTheLoginErrorMessage()
+        {
+            var isErrorDisplayed = await _loginPage.IsErrorDisplayed();
+            isErrorDisplayed.Should().BeTrue();
+        }
+
     }
 }
