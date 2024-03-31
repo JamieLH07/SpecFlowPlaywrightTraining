@@ -100,7 +100,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Password"});
                 table2.AddRow(new string[] {
                             "standard_user",
-                            "secret_sauce"});
+                            "secret_sauce1"});
 #line 6
  testRunner.And("I enter the following login details", ((string)(null)), table2, "And ");
 #line hidden
