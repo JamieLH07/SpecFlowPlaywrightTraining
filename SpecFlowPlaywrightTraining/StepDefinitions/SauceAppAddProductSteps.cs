@@ -48,12 +48,14 @@ namespace SpecFlowPlaywrightTraining.StepDefinitions
         public async Task ThenIAmAbleToNavigateToTheBasket()
         {
             await _productPage.NavigatetoBasket();
+            var isBasketLoaded = await _basketPage.IsBasketPageLoaded();
+            isBasketLoaded.Should().BeTrue();
         }
 
-        [Then(@"I can see products have been added to the Basket")]
-        public async Task ThenICanSeeProductsHaveBeenAddedToTheBasket()
+        [Then(@"I can see my products have been added to the Basket")]
+        public async Task ThenICanSeeMyProductsHaveBeenAddedToTheBasket()
         {
-            await _basketPage.IsBasketPageLoaded();
+            await _basketPage.CheckAddedProducts();
         }
 
     }
