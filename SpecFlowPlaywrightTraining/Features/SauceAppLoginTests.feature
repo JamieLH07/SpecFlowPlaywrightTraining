@@ -7,6 +7,8 @@ Scenario: Test Successful Login of Sauce Application
 		| UserName      | Password     |
 		| standard_user | secret_sauce |
 	Then I see the Products list
+	And I can then logout of the Application
+	Then Logout was successful
 
 
 Scenario: Test Unsuccessful Login of Sauce Application
