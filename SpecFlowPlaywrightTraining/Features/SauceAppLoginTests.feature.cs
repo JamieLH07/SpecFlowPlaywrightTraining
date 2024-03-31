@@ -95,17 +95,23 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
  testRunner.Given("I navigate to the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserName",
                             "Password"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "standard_user",
                             "secret_sauce"});
 #line 6
- testRunner.And("I enter the following login details", ((string)(null)), table2, "And ");
+ testRunner.And("I enter the following login details", ((string)(null)), table3, "And ");
 #line hidden
 #line 9
  testRunner.Then("I see the Products list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 10
+ testRunner.And("I can then logout of the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 11
+ testRunner.Then("Logout was successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -118,7 +124,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Unsuccessful Login of Sauce Application", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 12
+#line 14
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -128,19 +134,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 13
+#line 15
  testRunner.Given("I navigate to the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserName",
                             "Password"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "standard_user1",
                             "secret_sauce1"});
-#line 14
- testRunner.And("I enter the following login details", ((string)(null)), table3, "And ");
+#line 16
+ testRunner.And("I enter the following login details", ((string)(null)), table4, "And ");
 #line hidden
-#line 17
+#line 19
  testRunner.Then("I see the login error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

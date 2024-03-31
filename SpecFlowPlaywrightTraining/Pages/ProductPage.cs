@@ -35,5 +35,17 @@ namespace PlaywrightTrainingProject.Pages
 
         public async Task<bool> IsBasketUpdated() => await _txtBasketNumber.IsVisibleAsync();
 
+        public async Task Logout()
+        {
+            await _btnLeftPanel.ClickAsync();
+            await _btnLogout.ClickAsync();
+        }
+        public async Task<bool> IsLogoutSuccessful() => await _btnLogin.IsVisibleAsync();
+
+        public async Task NavigatetoBasket()
+        {
+            await _btnBasket.ClickAsync();
+        }
+
     }
 }
